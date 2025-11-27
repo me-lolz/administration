@@ -11,9 +11,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API Routes
-app.use('/api/register', require('./server/api/register'));
-app.use('/api/login', require('./server/api/login'));
-app.use('/api/verify', require('./server/api/verify'));
+// API Routes
+app.use('/api/register', require('./api/register'));
+app.use('/api/login', require('./api/login'));
+app.use('/api/verify', require('./api/verify'));
 
 // Serve frontend for all other routes
 app.get('*', (req, res) => {
@@ -23,3 +24,4 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
