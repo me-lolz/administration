@@ -1,5 +1,5 @@
-const Database = require('../lib/database');
-const { decryptData } = require('../lib/crypto');
+const Database = require('./lib/database');
+const { decryptData } = require('./lib/crypto');
 
 module.exports = async (req, res) => {
     if (req.method !== 'POST') {
@@ -32,4 +32,5 @@ module.exports = async (req, res) => {
         console.error('Login error:', error);
         res.status(401).json({ error: error.message });
     }
+
 };
