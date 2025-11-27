@@ -1,5 +1,5 @@
-const Database = require('./lib/database');
-const { decryptData } = require('./lib/crypto');
+const Database = require('../server/lib/database');
+const { decryptData } = require('../server/lib/crypto');
 
 module.exports = async (req, res) => {
     if (req.method !== 'POST') {
@@ -34,3 +34,4 @@ module.exports = async (req, res) => {
     }
 
 };
+
